@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>总线技术2020复习提纲 | 磊哥的博客</title>
+  <title>hook | 磊哥的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="总线基本概念现场总线概念概念：应用于生产现场，在现场设备之间、现场设备与控制装置之间实行双向、串行、多节点数字通信的技术。 内涵：将专用微处理器置入传统的测量控制设备，使其具有数字计算和数字通信能力，用双绞线等作总线，把多个测量控制设备连成网络系统，并按公开、规范的通信协议，在位于现场的多个微机化测量控制设备之间以及现场设备与远程监控计算机之间，实现数据传输与信息交换，形成适应各种实际需要的自动控">
+  <meta name="description" content="为共享状态逻辑提供更好的原生途径  注意点hook每次渲染都是一次闭包 使用规则 只能在函数最外层调用 Hook。不要在循环、条件判断或者子函数中调用。 只能在 React 的函数组件中调用 Hook。不要在其他 JavaScript 函数中调用。（还有一个地方可以调用 Hook —— 就是自定义的 Hook 中，我们稍后会学习到。）  effect Hook当我们想要在每次render之后执行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="总线技术2020复习提纲">
-<meta property="og:url" content="2020/06/29/%E6%80%BB%E7%BA%BF%E6%8A%80%E6%9C%AF2020%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/index.html">
+<meta property="og:title" content="hook">
+<meta property="og:url" content="2020/08/16/hook/index.html">
 <meta property="og:site_name" content="磊哥的博客">
-<meta property="og:description" content="总线基本概念现场总线概念概念：应用于生产现场，在现场设备之间、现场设备与控制装置之间实行双向、串行、多节点数字通信的技术。 内涵：将专用微处理器置入传统的测量控制设备，使其具有数字计算和数字通信能力，用双绞线等作总线，把多个测量控制设备连成网络系统，并按公开、规范的通信协议，在位于现场的多个微机化测量控制设备之间以及现场设备与远程监控计算机之间，实现数据传输与信息交换，形成适应各种实际需要的自动控">
+<meta property="og:description" content="为共享状态逻辑提供更好的原生途径  注意点hook每次渲染都是一次闭包 使用规则 只能在函数最外层调用 Hook。不要在循环、条件判断或者子函数中调用。 只能在 React 的函数组件中调用 Hook。不要在其他 JavaScript 函数中调用。（还有一个地方可以调用 Hook —— 就是自定义的 Hook 中，我们稍后会学习到。）  effect Hook当我们想要在每次render之后执行">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-29T04:01:53.345Z">
-<meta property="article:modified_time" content="2020-06-30T10:55:40.923Z">
+<meta property="article:published_time" content="2020-08-16T15:53:54.863Z">
+<meta property="article:modified_time" content="2020-07-21T09:10:18.000Z">
 <meta property="article:author" content="磊哥">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -179,122 +179,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-总线技术2020复习提纲" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hook" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      总线技术2020复习提纲
+      hook
     </h1>
   
 
         
-        <a href="2020/06/29/总线技术2020复习提纲/" class="archive-article-date">
-  	<time datetime="2020-06-29T04:01:53.345Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
+        <a href="2020/08/16/hook/" class="archive-article-date">
+  	<time datetime="2020-08-16T15:53:54.863Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="总线基本概念"><a href="#总线基本概念" class="headerlink" title="总线基本概念"></a>总线基本概念</h3><h4 id="现场总线概念"><a href="#现场总线概念" class="headerlink" title="现场总线概念"></a>现场总线概念</h4><p>概念：应用于生产现场，在现场设备之间、现场设备与控制装置之间实行双向、串行、多节点数字通信的技术。</p>
-<p>内涵：将<strong>专用微处理器</strong>置入传统的测量控制设备，使其具有数字计算和数字通信能力，用<strong>双绞线</strong>等作总线，把多个测量控制设备连成网络系统，并按<strong>公开、规范的通信协议</strong>，在位于现场的多个微机化测量控制设备之间以及现场设备与远程监控计算机之间，实现数据传输与信息交换，形成适应各种实际需要的自动控制系统。</p>
-<p>技术特点：</p>
-<p>•系统的开放性</p>
-<p>•互可操作性与互用性</p>
-<p>•现场设备的智能化与功能自治性</p>
-<p>•系统结构的高度分散性</p>
-<p>•对现场环境的适应性</p>
-<p>优点：</p>
-<p>•节省硬件数量与投资</p>
-<p>•节省安装费用</p>
-<p>•节约维护开销</p>
-<p>•用户具有高度的系统集成主动权</p>
-<p>•提高了系统的准确性与可靠性</p>
-<h4 id="总线的一次传输周期"><a href="#总线的一次传输周期" class="headerlink" title="总线的一次传输周期"></a>总线的一次传输周期</h4><p>① 总线请求和仲裁阶段：当有多个模块提出总线请求时，必须由仲裁机构仲裁，确定将总线的使用权分配给哪个模块。</p>
-<p>② 寻址阶段：取得总线使用权的模块，经总线发出本次要访问的存储器或I/O端口的地址和有关命令。</p>
-<p>③ 传送数据阶段：主模块（指取得总线控制权的模块）与其他模块之间进行数据的传送。</p>
-<p>④ 结束阶段：主模块将有关信息从总线上撤除，主模块交出对总线的控制权。</p>
-<p>总线操作：</p>
-<p>总线上数据发送者与接受者之间的连接-&gt;数据传送-&gt;脱开这一操作序列称为一次总线操作</p>
-<p>总线仲裁:</p>
-<p>当出现几个节点同时在网络上传输信息时,优先级高的节点可继续传输数据,优先级低的节点主动停止发送,从而避免了总线冲突</p>
-<h4 id="数据通信"><a href="#数据通信" class="headerlink" title="数据通信"></a>数据通信</h4><p><strong>通信系统有效性指标：</strong></p>
-<p>比特率——每秒传送的数据位</p>
-<p>波特率——每秒通过信道码元个数<br>吞吐量</p>
-<p>频带利用率——每赫兹带宽所能实现的比特率<br>协议效率——数据包中有效数据位与整个数据包长度的比值<br>通信效率——数据帧传输时间与发送报文总时间之比</p>
-<p><strong>可靠性指标：</strong><br>误码率——传送错误码元总数与总码元之比</p>
-<p>信噪比——信号功率S与噪声功率N的比，一般采用10lgS/N 来表示，单位是db</p>
-<h4 id="数据编码"><a href="#数据编码" class="headerlink" title="数据编码"></a>数据编码</h4><p>模拟数据编码：</p>
-<p>用模拟信号(如正弦波)的不同幅度、不同频率、不同相位来表达数据的0,1状态的编码方式。</p>
-<p>数字数据编码：</p>
-<p>用高低电平的矩形脉冲信号来表达数据的0,1状态的编码方式。</p>
-<p>前向差错纠正的冗余位判断:</p>
-<p>在接收端检测和纠正差错,无需请求重发</p>
-<p>将一些额外的位按照某种方式进行编码加入到通信数据中根据这些位的状态可检测到一定数量的错误并进行纠正</p>
-<p>增加这些额外的位增加了通信开支,也增加了计算量</p>
-<p>海明码常用于前向差错纠正</p>
-<p><strong>曼彻斯特编码:</strong></p>
-<p>高电平跳变到低电平表示0,从低电平跳变到高电平表示1</p>
-<h4 id="载波监听多路访问-冲突检测的工作原理"><a href="#载波监听多路访问-冲突检测的工作原理" class="headerlink" title="载波监听多路访问/冲突检测的工作原理"></a>载波监听多路访问/冲突检测的工作原理</h4><p>CSMA工作原理:</p>
-<p>网络上的任何节点都没有预订的通信时间,随机向网络发起通信.多个节点同时发起通信,使信号在传输线上相互混淆而遭破坏产生冲突,为避免冲突,每个节点在发送信息之前,为避免冲突,每个节点在发送信息之前,都要侦听传输线上是否有信息在发送,这就是载波监听</p>
-<p>CSMA控制方案:</p>
-<p>先听再讲.节点发送前先监听总线,如果介质空闲则发送.如果介质忙则等待一定时间间隔后重试</p>
-<p>CD工作原理:</p>
-<p>由于在传输线上存在传输延迟,从而导致冲突,故每个节点在开始发送信息之后,还要继续侦听线路,判定是否有其他节点正与本节点同时向传输介质发送,一旦发现,便中止当前发送,这就是冲突检测</p>
-<h4 id="通信网络的传输介质与拓扑模型"><a href="#通信网络的传输介质与拓扑模型" class="headerlink" title="通信网络的传输介质与拓扑模型"></a>通信网络的传输介质与拓扑模型</h4><p>传输介质是从发送设备到接受设备之间用于传递信号的媒介,是连接收发双方的物理通路.</p>
-<p>典型传输介质:</p>
-<p>-有线:双绞线 电缆 电力线 光缆等; -无线:电磁波 红外线</p>
-<p>拓扑结构:</p>
-<p>网络的拓扑结构是指网络中节点的互联形式,有环形 星形 总线形 树形</p>
-<h3 id="现场总线具体"><a href="#现场总线具体" class="headerlink" title="现场总线具体"></a>现场总线具体</h3><h4 id="can总线"><a href="#can总线" class="headerlink" title="can总线"></a>can总线</h4><p><strong>主要技术特点：</strong>节点不分主从有不同优先级、非破坏性总线仲裁技术、出错率低、传输介质</p>
-<p><strong>通信参考模型</strong>：物理层；数据链路层（逻辑链路子层、MAC子层）</p>
-<p> CAN总线具有两种逻辑状态，隐性(1)和显性(0)        </p>
-<p>显性状态下， VCAN-H和VCAN-L分别为3.5V和1.5V</p>
-<p><strong>技术规范</strong>：</p>
-<p>CAN2.0A——标准帧，具有11位标识符         </p>
-<p>CAN2.0B ——标准帧与扩展帧，扩展帧具有29位标识符         </p>
-<p>CAN报文帧四种类型：数据帧、远程帧、出错帧、超载帧      </p>
-<p>数据帧由7个不同的位场（域）组成：帧起始、仲裁场、控制场、数据场、 CRC场、应答场、帧结束</p>
-<h4 id="本质安全和总线供电的基本概念"><a href="#本质安全和总线供电的基本概念" class="headerlink" title="本质安全和总线供电的基本概念"></a>本质安全和总线供电的基本概念</h4><p>本质安全：将送往易燃易爆危险场合的能量，控制在引起火花所需能量的限度之内，从根本上防止在危险场合产生电火花而使系统安全得到保障</p>
-<p>总线供电：网络传输介质在用于传输数字信号的同时，还为网络节点设备传递工作电源</p>
-<h4 id="工业以太网"><a href="#工业以太网" class="headerlink" title="工业以太网"></a>工业以太网</h4><p>基本概念：工业以太网是普遍以太网技术在控制网络延伸的产物，是工业应用环境下信息网络与控制网络的结合体</p>
-<p>以太网技术在工控领域受限的原因：csma/cd的媒体访问控制方式不能满足一些控制场合的实时性要求：接插件、集线器、交换机等是为办公应用设计的，不适应工业现场恶劣环境的要求；抗电磁干扰能力；本质安全；总线供电</p>
-<h3 id="计算机总线"><a href="#计算机总线" class="headerlink" title="计算机总线"></a>计算机总线</h3><h4 id="I2C总线的主要特点及与SPI的比较"><a href="#I2C总线的主要特点及与SPI的比较" class="headerlink" title="I2C总线的主要特点及与SPI的比较"></a>I2C总线的主要特点及与SPI的比较</h4><p><strong>I2C总线特点</strong><br>总线速度：总线速度为从0Hz到3.4MHz，没有SPI快<br>流控：存在系统开销，这些开销包括起始位/停止位、确认位和从地址位，但它因此拥有流控机制<br>多主：允许多个主器件工作在同一总线上，多个主器件可以轻松同步其时钟<br>添加从器件：I2C总线只有两条导线，因此新从器件只需接入总线即可，而无需附加逻辑<br>非全双工，一般无FIFO</p>
-<p><strong>SPI总线特点</strong></p>
-<p>–总线速度：时钟速度很快，范围可从几兆赫兹到几十兆赫兹，且没有系统开销</p>
-<p>–流控：缺乏流控机制，无论主器件还是从器件均不对消息进行确认，主器件无法知道从器件是否繁忙</p>
-<p>–多主：没有多主器件协议，必须采用很复杂的软件和外部逻辑来实现多主器件架构</p>
-<p>–添加从器件：每个从器件需要一个单独的从选择信号。总信号数最终为n+3个，其中n是总线上从器件的数量。在SPI总线上添加新的从器件也不方便。对于额外添加的每个从器件，都需要一条新的从器件选择线或解码逻辑</p>
-<p>–可实现全双工通信</p>
-<p><strong>差异:</strong></p>
-<p>总线速度spi比i2c快</p>
-<p>i2c有流控,spi没有</p>
-<p>i2c允许多主机,spi没有多主器件协议</p>
-<p>i2c添加器件方便</p>
-<p>spi可以双向通信,i2c不行</p>
-<h4 id="USB的主要特性、体系结构、传输方式"><a href="#USB的主要特性、体系结构、传输方式" class="headerlink" title="USB的主要特性、体系结构、传输方式"></a>USB的主要特性、体系结构、传输方式</h4><p>传输速度快： USB3.0 — 4.8Gb/s<br> 支持热拔插，即插即用，可连接不同种类外设<br> 无须外接电源，总线提供<br>一个接口可同时连接127台USB设备</p>
-<p>体系结构：</p>
-<p>usb总线系统的设备可以分为三个类型：usb主机、usb集线器、usb总线的设备</p>
-<p>USB的传输方式：</p>
-<p>控制传输（设备控制指令、状态查询）；</p>
-<p>同步传输（对时间敏感，如麦克风、喇叭）；</p>
-<p>中断传输（数据量小，如键盘、鼠标）；</p>
-<p>批量传输（如硬盘、打印机）</p>
-<h4 id="RS485的主要特性及与RS422的区别"><a href="#RS485的主要特性及与RS422的区别" class="headerlink" title="RS485的主要特性及与RS422的区别"></a>RS485的主要特性及与RS422的区别</h4><p>与RS422相同：</p>
-<p> （1）平衡发送、差分接收，抗干扰能力强；</p>
-<p> （2）最大通信距离约1219m，最大速率为10Mbps</p>
-<p> （3）两线间电压差 +2V~+6V表示逻辑“1” ；    </p>
-<p>与RS422不同：</p>
-<p> （1）RS-422支持一点对多点传输</p>
-<p> （2）RS-485支持多点对多点传输</p>
-<p> （3）RS-422有4 根信号线，支持全双工通讯</p>
-<p> （4）RS-485有2 根信号线，只能半双工通讯`</p>
-<h4 id="PCI局部总线的主要技术特点和性能指标"><a href="#PCI局部总线的主要技术特点和性能指标" class="headerlink" title="PCI局部总线的主要技术特点和性能指标"></a>PCI局部总线的主要技术特点和性能指标</h4><p>PCI是一种局部<strong>并行总线</strong>标准，结构简单、成本低，</p>
-<p>即插即用。工作频率为33MHz，位宽32位或64位，</p>
-<p>最大数据传输率为133MB/s（32位）和266MB/s</p>
+        <p> 为共享状态逻辑提供更好的原生途径 </p>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>hook每次渲染都是一次闭包</p>
+<h4 id="使用规则"><a href="#使用规则" class="headerlink" title="使用规则"></a>使用规则</h4><ul>
+<li>只能在<strong>函数最外层</strong>调用 Hook。不要在循环、条件判断或者子函数中调用。</li>
+<li>只能在 <strong>React 的函数组件</strong>中调用 Hook。不要在其他 JavaScript 函数中调用。（还有一个地方可以调用 Hook —— 就是自定义的 Hook 中，我们稍后会学习到。）</li>
+</ul>
+<h4 id="effect-Hook"><a href="#effect-Hook" class="headerlink" title="effect Hook"></a>effect Hook</h4><p>当我们想要在每次render之后执行时在class组件中需要在commponentDidMount和componentDidUpdate中都调用事件。<br> 而在hook中就只需要在useEffect中调用就可以</p>
+<p>useEffect的第二个参数必须传空数组，这样它就等价于只在componentDidMount的时候执行。如果不传第二个参数的话，它就等价于componentDidMount和componentDidUpdate</p>
+<h4 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">TextInputWithFocusButton</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> inputEl = useRef(<span class="literal">null</span>);</span><br><span class="line">  <span class="keyword">const</span> onButtonClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// `current` 指向已挂载到 DOM 上的文本输入元素</span></span><br><span class="line">    inputEl.current.focus();</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;input ref=&#123;inputEl&#125; type=<span class="string">"text"</span> /&gt;</span><br><span class="line">      &lt;button onClick=&#123;onButtonClick&#125;&gt;Focus the input&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>本质上，<code>useRef</code> 就像是可以在其 <code>.current</code> 属性中保存一个可变值的“盒子”。</p>
+<p>应该熟悉 ref 这一种<a href="https://zh-hans.reactjs.org/docs/refs-and-the-dom.html" target="_blank" rel="noopener">访问 DOM</a> 的主要方式。如果你将 ref 对象以 `` 形式传入组件，则无论该节点如何改变，React 都会将 ref 对象的 <code>.current</code> 属性设置为相应的 DOM 节点。</p>
+<p>然而，<code>useRef()</code> 比 <code>ref</code> 属性更有用。它可以<a href="https://zh-hans.reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables" target="_blank" rel="noopener">很方便地保存任何可变值</a>，其类似于在 class 中使用实例字段的方式。</p>
+<h4 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h4><p>一般情况下当状态或props属性发生变化时候会更新组件，如果想要自己控制，可以使用useMemo，他是为了解决重复渲染的问题，本质是把数据放到内存空间中去，也就是以空间换速度的一个东西，他能提高性能，用的时候非常快，但是占空间</p>
+<p>useMemo(  () =&gt; {} , [默认可以不写] )是一个函数，第一个参数是一个函数，第二个参数是一个数组，</p>
+<p>当依赖数组中的参数发生变化，执行函数</p>
+<p>useMemo执行时间实在组件渲染过程中，useEffect是在组件挂载后执行</p>
+<h4 id="useCallback"><a href="#useCallback" class="headerlink" title="useCallback"></a>useCallback</h4><p>他也是避免组件重复渲染，提高性能，可以控制组件什么时候更新,和</p>
+<p>useCallbacl(  () =&gt; {fn} , [默认可以不写] )是一个函数，第一个参数是一个函数，第二个参数是一个数组，默认不写就是监控所有的状态</p>
+<p>useCallback: 一般用于缓存函数</p>
+<p>useMemo: 一般用于缓存组件</p>
+<h4 id="处理异步"><a href="#处理异步" class="headerlink" title="处理异步"></a>处理异步</h4><p>把要同步的函数放到useEffect之中</p>
+<h4 id="如何避免重复创建昂贵的对象"><a href="#如何避免重复创建昂贵的对象" class="headerlink" title="如何避免重复创建昂贵的对象"></a>如何避免重复创建昂贵的对象</h4><p>方法一: 使用 <code>useState</code> 的懒初始化, 用法如下</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const [value, setValue] = useState(<span class="function"><span class="params">()</span> =&gt;</span> createExpensiveObj)</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -374,7 +303,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:2020/06/29/总线技术2020复习提纲/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:2020/08/16/hook/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -388,18 +317,18 @@
   
 <nav id="article-nav">
   
-    <a href="2020/08/16/hook/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="2020/08/16/react/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hook
+          react
         
       </div>
     </a>
   
   
-    <a href="2020/06/26/计算机网络/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">计算机网络</div>
+    <a href="2020/06/29/总线技术2020复习提纲/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">总线技术2020复习提纲</div>
       <i class="icon-circle-right"></i>
     </a>
   
